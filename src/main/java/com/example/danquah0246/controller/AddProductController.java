@@ -1,8 +1,7 @@
 package com.example.danquah0246.controller;
 import com.example.danquah0246.Repository.Inventory;
-import com.example.danquah0246.controller.AddProductController;
 import com.example.danquah0246.Repository.Part;
-import com.example.danquah0246.Repository.Product;
+import com.example.danquah0246.database.entity.Product;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;

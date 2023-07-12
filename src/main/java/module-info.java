@@ -9,4 +9,6 @@ module com.example.jeffreydanquah {
     opens com.example.danquah0246.controller to javafx.fxml;
     exports com.example.danquah0246.Repository;
     opens com.example.danquah0246.Repository to javafx.fxml;
+    exports com.example.danquah0246.database.entity;
+    opens com.example.danquah0246.database.entity to javafx.fxml;
 }

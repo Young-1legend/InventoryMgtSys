@@ -60,7 +60,7 @@ public class Inventory extends Part{
 
 
     //parts
-    public static ObservableList<Inventory.Part> getPartsInventory(){
+    public static ObservableList<Part> getPartsInventory(){
         return partsInventory;
     }
 

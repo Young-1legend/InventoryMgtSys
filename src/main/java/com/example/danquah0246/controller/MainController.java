@@ -5,7 +5,7 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 import com.example.danquah0246.Repository.Inventory;
 import com.example.danquah0246.Repository.Part;
-import com.example.danquah0246.Repository.Product;
+import com.example.danquah0246.database.entity.Product;
 import javafx.application.Platform;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
