@@ -3,7 +3,7 @@ package com.example.danquah0246.Repository;
 import javafx.beans.property.*;
 
 
-public abstract class Part {
+public  class Part {
 
     private final IntegerProperty partId;
     private final StringProperty name;

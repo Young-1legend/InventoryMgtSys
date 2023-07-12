@@ -4,9 +4,12 @@ import com.example.danquah0246.database.entity.Product;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-public class Inventory extends Part{
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
-    private static ObservableList<Inventory.Part> partsInventory = FXCollections.observableArrayList();
+public class Inventory {
+
+    private static ObservableList<Part> partsInventory = FXCollections.observableArrayList();
     private static ObservableList<Product> productsInventory = FXCollections.observableArrayList();
 
 
@@ -100,7 +103,7 @@ public class Inventory extends Part{
     }
 
 
-    public static void updatePart(int partNum, OutsourcedPart part){
+    public static void updatePart(int partNum, Part part){
         partsInventory.set(partNum, part);
     }
 
@@ -115,5 +118,4 @@ public class Inventory extends Part{
             return false;
         }
     }
-
 }

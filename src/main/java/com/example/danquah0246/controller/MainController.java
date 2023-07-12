@@ -125,7 +125,7 @@ public class MainController implements Initializable {
     public void handleGoToModifyParts(ActionEvent event)throws IOException{
         Part tempPart = tvParts.getSelectionModel().getSelectedItem();
         modifyPartIndex = Inventory.getPartsInventory().indexOf(tempPart);
-        Parent addPartsScreen = FXMLLoader.load(getClass().getResource("../../../../../resources/com/example/danquah0246/ModifyPart.fxml"));
+        Parent addPartsScreen = FXMLLoader.load(getClass().getResource("ModifyPart.fxml"));
         Scene addPartsScene = new Scene(addPartsScreen);
         //next line is getting stage information
         Stage addPartsStage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -155,7 +155,7 @@ public class MainController implements Initializable {
 
     @FXML
     private void handleGoToAddParts(ActionEvent event) throws IOException{
-        Parent addPartsScreen = FXMLLoader.load(getClass().getResource("../../../../../resources/com/example/danquah0246/AddPart.fxml"));
+        Parent addPartsScreen = FXMLLoader.load(getClass().getResource("AddPart.fxml"));
         Scene addPartsScene = new Scene(addPartsScreen);
         //next line is getting stage information
         Stage addPartsStage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -193,7 +193,7 @@ public class MainController implements Initializable {
     private void handleGoToModifyProducts(ActionEvent event)throws IOException{
         Product tempProduct = tvProducts.getSelectionModel().getSelectedItem();
         modifyProductIndex = Inventory.getProductsInventory().indexOf(tempProduct);
-        Parent addPartsScreen = FXMLLoader.load(getClass().getResource("../../../../../resources/com/example/danquah0246/ModifyProduct.fxml"));
+        Parent addPartsScreen = FXMLLoader.load(getClass().getResource("ModifyProduct.fxml"));
         Scene addPartsScene = new Scene(addPartsScreen);
         //next line is getting stage information
         Stage addPartsStage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -207,7 +207,7 @@ public class MainController implements Initializable {
 
     @FXML
     private void handleGoToAddProducts (ActionEvent event)throws IOException{
-        Parent addPartsScreen = FXMLLoader.load(getClass().getResource("../../../../../resources/com/example/danquah0246/AddProduct.fxml"));
+        Parent addPartsScreen = FXMLLoader.load(getClass().getResource("AddProduct.fxml"));
         Scene addPartsScene = new Scene(addPartsScreen);
         //next line is getting stage information
         Stage addPartsStage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -265,13 +265,4 @@ public class MainController implements Initializable {
         tvProducts.setItems(Inventory.getProductsInventory());
     }
 
-
-
-
-
-
-
-
-
 }
-

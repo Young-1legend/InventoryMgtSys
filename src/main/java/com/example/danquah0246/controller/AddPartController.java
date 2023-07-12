@@ -74,7 +74,7 @@ public class AddPartController implements Initializable {
 
 
         if(outcome.get() == ButtonType.OK) {
-            Parent addPartsScreen = FXMLLoader.load(getClass().getResource("../../../../../resources/com/example/danquah0246/Main.fxml"));
+            Parent addPartsScreen = FXMLLoader.load(getClass().getResource("Main.fxml"));
             Scene addPartsScene = new Scene(addPartsScreen);
             //next line is getting stage information
             Stage addPartsStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -97,7 +97,7 @@ public class AddPartController implements Initializable {
         this.switchLabel.setText("Machine ID:");
         this.radioInHouse.setToggleGroup(sourceToggleGroup);
         radioInHouse.setSelected(true);
-        }
+    }
 
     @FXML
     void handleRadioOutSourced(ActionEvent event) {
@@ -149,7 +149,7 @@ public class AddPartController implements Initializable {
                 }
 
                 //switch to home screen
-                Parent addPartsScreen = FXMLLoader.load(getClass().getResource("../../../../../resources/com/example/danquah0246/Main.fxml"));
+                Parent addPartsScreen = FXMLLoader.load(getClass().getResource("Main.fxml"));
                 Scene addPartsScene = new Scene(addPartsScreen);
                 //next line is getting stage information
                 Stage addPartsStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -174,5 +174,6 @@ public class AddPartController implements Initializable {
         ;
 
     }
+
 
 }

@@ -82,7 +82,7 @@ public class ModifyPartController implements Initializable {
 
 
         if(outcome.get() == ButtonType.OK) {
-            Parent addPartsScreen = FXMLLoader.load(getClass().getResource("../../../../../resources/com/example/danquah0246/Main.fxml"));
+            Parent addPartsScreen = FXMLLoader.load(getClass().getResource("Main.fxml"));
             Scene addPartsScene = new Scene(addPartsScreen);
             //next line is getting stage information
             Stage addPartsStage = (Stage) ((Node) event.getSource()).getScene().getWindow();
@@ -121,7 +121,7 @@ public class ModifyPartController implements Initializable {
         }
 
         //switch to home screen
-        Parent modifyPartsScreen = FXMLLoader.load(getClass().getResource("../../../../../resources/com/example/danquah0246/Main.fxml"));
+        Parent modifyPartsScreen = FXMLLoader.load(getClass().getResource("Main.fxml"));
         Scene addPartsScene = new Scene(modifyPartsScreen);
         //next line is getting stage information
         Stage addPartsStage = (Stage)((Node)event.getSource()).getScene().getWindow();
@@ -160,21 +160,16 @@ public class ModifyPartController implements Initializable {
     //initialize method that loads when screen loads
     @Override
     public void initialize (URL url, ResourceBundle rb){
-        Inventory.Part partToBeModified = Inventory.getPartsInventory().get(MainController.getModifyPartIndex());
+        Part partToBeModified = Inventory.getPartsInventory().get(MainController.getModifyPartIndex());
 
         idTextField.setText(String.valueOf(partToBeModified.getPartId()));
-        nameTextField.setText(((Part) partToBeModified).getName());
+        nameTextField.setText(partToBeModified.getName());
         inventoryTextField.setText(String.valueOf(partToBeModified.getInStock()));
         priceTextField.setText(String.valueOf(partToBeModified.getPrice()));
         minTextField.setText(String.valueOf(partToBeModified.getMin()));
         maxTextField.setText(String.valueOf(partToBeModified.getMax()));
 
-        if(partToBeModified instanceof InHousePart){
-            switchLabel.setText("Machine ID:");
-            switchTextField.setText(String.valueOf(((InHousePart) partToBeModified).getMachineID()));
-            radioInHouse.setSelected(true);
-        }
-        else if(partToBeModified instanceof  OutsourcedPart){
+        if(partToBeModified instanceof  OutsourcedPart){
             switchLabel.setText("Company Name:");
             switchTextField.setText(((OutsourcedPart) partToBeModified).getCompanyName());
             radioOutSource.setSelected(true);

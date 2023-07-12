@@ -10,7 +10,7 @@ public class ProductSource {
             Class.forName("com.mysql.jdbc.Driver");
 
             // Establish the connection
-            String url = "jdbc:mysql://localhost:3306/MYSQL Workbench";
+            String url = "jdbc:mysql://localhost:3306/inventory_mgt_sys";
             String username = "Young Legend";
             String password = "scientiA89$12345";
             Connection connection = DriverManager.getConnection(url, username, password);
