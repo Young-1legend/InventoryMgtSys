@@ -4,9 +4,6 @@ import com.example.danquah0246.database.entity.Product;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
-
 public class Inventory {
 
     private static ObservableList<Part> partsInventory = FXCollections.observableArrayList();
@@ -103,7 +100,7 @@ public class Inventory {
     }
 
 
-    public static void updatePart(int partNum, Part part){
+    public static void updatePart(int partNum, OutsourcedPart part){
         partsInventory.set(partNum, part);
     }
 

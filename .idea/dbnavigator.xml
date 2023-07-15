@@ -2,7 +2,7 @@
 <project version="4">
   <component name="DBNavigator.Project.DataEditorManager">
     <record-view-column-sorting-type value="BY_INDEX" />
-    <value-preview-text-wrapping value="true" />
+    <value-preview-text-wrapping value="false" />
     <value-preview-pinned value="false" />
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
@@ -13,8 +13,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="282833df-a3d7-43bd-9ca7-faf9ec1d881f">
-      <console name="Young Legend" type="STANDARD" schema="inventory_mgt_sys" session="Main"><![CDATA[select * from product
-INSERT INTO `inventory_mgt_sys`.`product` (`itemName`, `itemCategory`, `price`) VALUES ('egg', 'household', '34.00');]]></console>
+      <console name="Young Legend" type="STANDARD" schema="inventory_mgt_sys" session="Main"><![CDATA[select * from parts;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">

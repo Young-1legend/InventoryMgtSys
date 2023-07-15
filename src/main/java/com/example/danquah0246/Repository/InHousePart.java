@@ -8,6 +8,7 @@ public class InHousePart extends Inventory {
 
 
     private final IntegerProperty machineID;
+    private int partId;
 
     public InHousePart(){
         super();
@@ -22,4 +23,26 @@ public class InHousePart extends Inventory {
         return this.machineID.get();
     }
 
+    public void setPartId(int partId) {
+        this.partId = partId;
+    }
+
+    public int getPartId() {
+        return partId;
+    }
+
+    public void setName(String text) {
+    }
+
+    public void setInStock(int i) {
+    }
+
+    public void setPrice(double v) {
+    }
+
+    public void setMin(int i) {
+    }
+
+    public void setMax(int i) {
+    }
 }

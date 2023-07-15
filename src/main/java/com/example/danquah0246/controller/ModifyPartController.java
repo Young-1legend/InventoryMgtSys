@@ -1,10 +1,10 @@
 package com.example.danquah0246.controller;
 
+
 import com.example.danquah0246.Repository.InHousePart;
 import com.example.danquah0246.Repository.Inventory;
 import com.example.danquah0246.Repository.OutsourcedPart;
 import com.example.danquah0246.Repository.Part;
-import com.example.danquah0246.controller.ModifyPartController.*;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -95,7 +95,7 @@ public class ModifyPartController implements Initializable {
     void handleModifyPartSave(ActionEvent event) throws IOException {
 
         if(isOutsourced == false){
-            InHousePart partIH = new InHousePart();
+            OutsourcedPart partIH = (OutsourcedPart) new InHousePart();
             partIH.setPartId(Integer.parseInt(idTextField.getText()));
             partIH.setName(nameTextField.getText());
             partIH.setInStock(Integer.parseInt(inventoryTextField.getText()));

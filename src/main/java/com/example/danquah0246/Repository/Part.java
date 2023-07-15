@@ -3,7 +3,7 @@ package com.example.danquah0246.Repository;
 import javafx.beans.property.*;
 
 
-public  class Part {
+public  class Part extends InHousePart {
 
     private final IntegerProperty partId;
     private final StringProperty name;
@@ -23,7 +23,7 @@ public  class Part {
     }
 
     //getters
-    public Integer getPartId() {
+    public int getPartId() {
         return partId.get();
     }
 

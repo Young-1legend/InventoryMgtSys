@@ -60,8 +60,6 @@ public class AddPartController implements Initializable {
     private String errorMsg = new String();
 
 
-
-
     @FXML
     void handleCancelAddPart(ActionEvent event) throws IOException {
 
@@ -73,7 +71,7 @@ public class AddPartController implements Initializable {
         Optional<ButtonType> outcome = alert.showAndWait();
 
 
-        if(outcome.get() == ButtonType.OK) {
+        if (outcome.get() == ButtonType.OK) {
             Parent addPartsScreen = FXMLLoader.load(getClass().getResource("Main.fxml"));
             Scene addPartsScene = new Scene(addPartsScreen);
             //next line is getting stage information
@@ -86,6 +84,7 @@ public class AddPartController implements Initializable {
 
 
     ToggleGroup sourceToggleGroup;
+
     {
         sourceToggleGroup = new ToggleGroup();
     }
@@ -123,8 +122,7 @@ public class AddPartController implements Initializable {
                 alert.setContentText(errorMsg);
                 alert.showAndWait();
                 errorMsg = "";
-            }
-            else {
+            } else {
                 if (isOutsourced == false) {
                     InHousePart partIH = new InHousePart();
                     partIH.setPartId(Integer.parseInt(idTextField.getText()));
@@ -134,7 +132,7 @@ public class AddPartController implements Initializable {
                     partIH.setMin(Integer.parseInt(minTextField.getText()));
                     partIH.setMax(Integer.parseInt(maxTextField.getText()));
                     partIH.setMachineID(Integer.parseInt(switchTextField.getText()));
-                    Inventory.addParts(partIH);
+                    Inventory.addParts((Part) partIH);
                 } else if (isOutsourced == true) {
                     OutsourcedPart partOS = new OutsourcedPart();
                     partOS.setPartId(Integer.parseInt(idTextField.getText()));
@@ -157,8 +155,7 @@ public class AddPartController implements Initializable {
                 addPartsStage.show();
 
             }
-        }
-        catch (NumberFormatException e){
+        } catch (NumberFormatException e) {
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setTitle("Error");
             alert.setHeaderText("Error adding part");
@@ -170,10 +167,8 @@ public class AddPartController implements Initializable {
 
     //initialize method that loads when screen loads
     @Override
-    public void initialize (URL url, ResourceBundle rb){
+    public void initialize(URL url, ResourceBundle rb) {
         ;
 
     }
-
-
 }
